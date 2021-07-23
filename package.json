@@ -53,6 +53,7 @@
     "express": "^4.17.1",
     "glob": "^7.1.6",
     "gorko": "^0.2.1",
+    "gts": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "html-minifier": "^4.0.0",
@@ -67,6 +68,7 @@
     "remove-markdown": "^0.3.0",
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
+    "typedoc": "^0.21.4",
     "unistore": "^3.5.2"
   },
   "devDependencies": {
@@ -87,7 +89,6 @@
     "csso": "^4.0.3",
     "dotenv": "^8.2.0",
     "eslint-plugin-ava": "^11.0.0",
-    "gts": "^2.0.2",
     "html-escaper": "^2.0.2",
     "husky": "^4.3.0",
     "install": "^0.13.0",
@@ -120,7 +121,7 @@
     "stylelint-config-sass-guidelines": "^7.1.0",
     "terser": "^5.4.0",
     "tmp": "^0.2.1",
-    "typescript": "^3.8.3",
+    "typescript": "^4.3.5",
     "unified-lint-rule": "^1.0.6",
     "unist-util-map": "^2.0.1",
     "unist-util-to-list-of-char": "^0.1.2",
