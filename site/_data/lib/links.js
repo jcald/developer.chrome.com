@@ -43,13 +43,13 @@ let SectionLinkItem;
  * for the passed pageUrl, including partial matches (useful for generated
  * pages).
  *
- * @param {Section[]} sections
+ * @param {Section[]?} sections
  * @param {string} pageUrl
  * @param {string} locale
  * @return {SectionLinkItem[]|undefined}
  */
 function expandSections(sections, pageUrl, locale) {
-  if (!pageUrl) {
+  if (!pageUrl || !sections?.length || !Array.isArray(sections)) {
     return;
   }
 

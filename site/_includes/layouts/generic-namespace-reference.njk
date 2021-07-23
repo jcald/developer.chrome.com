@@ -1,0 +1,49 @@
+{#
+  This is run for every generic API namespaces, e.g., for "workbox.foo".
+#}
+
+{% extends "layouts/base.njk" %}
+
+{% block title_bar %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
+{% import 'macros/render-type.njk' as macros with context %}
+
+{% set content %}
+  <div class="type stack">
+    {{ content | safe }}
+  </div>
+
+  <h2 class="type--h3">Summary</h2>
+{% endset %}
+
+{% set tocContents %}
+  {{- content | toc | safe -}}
+{% endset %}
+
+{% block content %}
+  <div class="display-flex gap-top-300 lg:gap-top-400">
+    {% include 'partials/navigation-tree.njk' %}
+
+    <article class="stack measure-long center-margin pad-left-400 pad-right-400">
+      <h1 class="type--h2">{{ api.name }}</h1>
+
+      <div class="stack flow-space-300">
+      {% for prop in api.reflection.children %}
+
+<div class="type stack">
+  <h3 id="{{ prop.name }}">{{ prop.name }}</h3>
+</div>
+
+      {% endfor %}
+      </div>
+
+      {% include 'partials/toc-inner.njk' %}
+
+      {{ content | safe }}
+    </article>
+
+    {% include 'partials/toc-side.njk' %}
+  </div>
+{% endblock %}
